@@ -11,6 +11,7 @@ public class OnCollision_SwitchScene : MonoBehaviour
     public string sceneName;  // 씬 이름 : Inspector에 지정
     public string audio;
     int count = 0;
+    int maxCount = 0;
     bool setcount = false;
 
     void OnCollisionEnter2D(Collision2D collision)// 충돌했을 때
@@ -21,6 +22,13 @@ public class OnCollision_SwitchScene : MonoBehaviour
             if (audio == "carrot")
             {
                 SoundManager.instance.PlayCarrotSound();
+                maxCount = 270;
+                setcount = true;
+            }
+            if (audio == "die")
+            {
+                SoundManager.instance.PlayDieSound();
+                maxCount = 90;
                 setcount = true;
             }
             // 씬을 전환한다
@@ -29,10 +37,14 @@ public class OnCollision_SwitchScene : MonoBehaviour
     }
     void Update()
     {
-        if (setcount) { count += 1; }
-        if (count == 270)
+        if (setcount)
         {
-            SceneManager.LoadScene(sceneName);
+            count += 1;
+            if (count == maxCount)
+            {
+                SceneManager.LoadScene(sceneName);
+            }
         }
+
     }
 }

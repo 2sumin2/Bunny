@@ -17,6 +17,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip die;
     public AudioClip item;
     public AudioClip carrot;
+    public AudioClip crack;
+    public AudioClip destroy;
 
     public static SoundManager instance;
 
@@ -64,6 +66,14 @@ public class SoundManager : MonoBehaviour
     public void PlayCarrotSound()
     {
         audioSource.PlayOneShot(carrot);
+    }
+    public void PlayCrackSound()
+    {
+        audioSource.PlayOneShot(crack);
+    }
+    public void PlayDestroySound()
+    {
+        audioSource.PlayOneShot(destroy);
     }
 
 }

@@ -2173,7 +2173,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0029499233, y: -0.0026604887}
+  m_Offset: {x: -0.0029499233, y: 0.026516024}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2184,7 +2184,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.31083506, y: 0.13027681}
+  m_Size: {x: 0.31083506, y: 0.071923785}
   m_EdgeRadius: 0
 --- !u!212 &708410346
 SpriteRenderer:
@@ -2245,7 +2245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708410341}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.45, y: 10.12, z: 0}
+  m_LocalPosition: {x: 20.6, y: 10.81, z: 0}
   m_LocalScale: {x: 6.7367396, y: 6.1116, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2848,7 +2848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObjectName: player
   sceneName: stage3
-  audio: 
+  audio: die
 --- !u!61 &926771027
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3319,7 +3319,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0029499233, y: -0.007026233}
+  m_Offset: {x: -0.0029499233, y: 0.026955307}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3330,7 +3330,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.31083506, y: 0.11406155}
+  m_Size: {x: 0.31083506, y: 0.08994523}
   m_EdgeRadius: 0
 --- !u!212 &1018572526
 SpriteRenderer:
@@ -3764,6 +3764,7 @@ GameObject:
   - component: {fileID: 1297777949}
   - component: {fileID: 1297777948}
   - component: {fileID: 1297777947}
+  - component: {fileID: 1297777950}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -3790,7 +3791,7 @@ MonoBehaviour:
   jump: {fileID: 8300000, guid: b3aa77133bd7da5419c7e83830f6ef70, type: 3}
   oww: {fileID: 8300000, guid: dcdab98d34dc2c14f922962da51bf16a, type: 3}
   shock: {fileID: 8300000, guid: 589aeaaec300a6a4aa7144d2848c0349, type: 3}
-  die: {fileID: 8300000, guid: e19d2e36673284f439637b9321a25dee, type: 3}
+  die: {fileID: 8300000, guid: 31f7e5991f0101b4c8da556e807a9e42, type: 3}
   item: {fileID: 8300000, guid: f7e968b02f1cb1f42b5501c27e3fedf4, type: 3}
   carrot: {fileID: 8300000, guid: aa5b99db825bbc74f908e274fac2414f, type: 3}
 --- !u!114 &1297777948
@@ -3820,6 +3821,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1297777950
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297777946}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 875d0d0dd6939a24da2531e1ee0bd6d7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.319
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1302760916
 GameObject:
   m_ObjectHideFlags: 0
@@ -4871,8 +4968,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597925808}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 58.29, y: 25.2, z: -2}
-  m_LocalScale: {x: 3.1863, y: 3.2883, z: 1}
+  m_LocalPosition: {x: 58.3134, y: 25.2351, z: -2}
+  m_LocalScale: {x: 3.4615965, y: 3.657905, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 49
@@ -5237,7 +5334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObjectName: player
   sceneName: stage3
-  audio: 
+  audio: die
 --- !u!114 &1677718273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6418,9 +6515,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -384.4, y: -191.9}
-  m_SizeDelta: {x: 181.1917, y: 23.1127}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 370.7915, y: 180.47113}
+  m_SizeDelta: {x: 219.961, y: 88.8998}
+  m_Pivot: {x: 0.6278052, y: 0.25852373}
 --- !u!114 &1872659077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6464,7 +6561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0}
+  m_Color: {r: 1, g: 0, b: 0.34794378, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6473,11 +6570,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 7
+    m_MaxSize: 70
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1

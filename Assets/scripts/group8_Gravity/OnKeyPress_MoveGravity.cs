@@ -37,7 +37,7 @@ public class OnKeyPress_MoveGravity : MonoBehaviour
                 SoundManager.instance.PlayStepSound();
             }
         }
-        if (Input.GetKey("left")) // 만약 왼쪽 키가 눌리면
+        else if (Input.GetKey("left")) // 만약 왼쪽 키가 눌리면
         { // 
             vx = -speed; // 왼쪽으로 진행하는 이동량을 넣는다 
             leftFlag = true;
