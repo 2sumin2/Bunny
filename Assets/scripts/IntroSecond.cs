@@ -49,11 +49,16 @@ public class IntroSecond : MonoBehaviour
             Animator animator = this.GetComponent<Animator>();
             animator.Play(skipAnime);
             rbody.velocity = new Vector2(2, 0);
+            if (count % 30 == 0)
+            {
+                SoundManager.instance.PlayStepSound();
+            }
         }
         else if (count == 278)
         {
             rbody.velocity = new Vector2(0, 0);
             Animator animator = this.GetComponent<Animator>();
+            SoundManager.instance.PlayShockSound();
             animator.enabled = false;
             showObjectOne.SetActive(true);
         }

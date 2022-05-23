@@ -9,9 +9,10 @@ public class OnMouseDown_SwitchScene : MonoBehaviour
 
     public string sceneName;  // 씬 이름：Inspector에 지정
 
-    void OnMouseDown() 
-	{ // 터치하면
+    void OnMouseDown()
+    { // 터치하면
         // 씬을 전환한다 
-        SceneManager.LoadScene (sceneName);
+        SoundManager.instance.PlayClickSound();
+        SceneManager.LoadScene(sceneName);
     }
 }

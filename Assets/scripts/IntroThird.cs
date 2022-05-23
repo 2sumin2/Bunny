@@ -5,10 +5,13 @@ using UnityEngine;
 public class IntroThird : MonoBehaviour
 {
     public string showObjectName;
+    public string carrotName;
+    public string skipAnime = "";
+    public string idleAnime = "";
     int count = 0;
     Rigidbody2D rbody;
     GameObject showObject;
-
+    GameObject carrot;
 
     void Start()
     { // 처음에 시행한다
@@ -16,10 +19,16 @@ public class IntroThird : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         rbody.gravityScale = 0;
         rbody.constraints = RigidbodyConstraints2D.FreezeRotation;
-        rbody.velocity = new Vector2(2, 0);
 
         showObject = GameObject.Find(showObjectName);
         showObject.SetActive(false);
+
+        carrot = GameObject.Find(carrotName);
+
+        Animator animator = this.GetComponent<Animator>();
+        animator.Play(idleAnime);
+
+
     }
 
     void Update()
@@ -28,13 +37,27 @@ public class IntroThird : MonoBehaviour
     }
     void FixedUpdate()
     {
-
-        if (count == 400)
+        if (count == 10)
+        {
+            SoundManager.instance.PlayOwwSound();
+        }
+        if (count == 100)
+        {
+            Animator animator = this.GetComponent<Animator>();
+            animator.Play(skipAnime);
+            rbody.velocity = new Vector2(2, 0);
+            carrot.SetActive(false);
+        }
+        if (count == 500)
         {
             showObject.SetActive(true);
+            SoundManager.instance.PlayStartSound();
         }
-
-        if (count < 400)
+        if (count >= 100 && count % 30 == 0)
+        {
+            SoundManager.instance.PlayStepSound();
+        }
+        if (count <= 500)
         {
             count += 1;
         }

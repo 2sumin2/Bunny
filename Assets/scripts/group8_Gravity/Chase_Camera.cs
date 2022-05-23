@@ -6,14 +6,16 @@ using UnityEngine;
 public class Chase_Camera : MonoBehaviour
 {
     public string targetObjectName = "";
+    public int x = 0;
+    public int y = 0;
 
     GameObject targetObject;
     void LateUpdate()// 계속 시행한다(여러 가지 처리의 마지막에)
     {
         targetObject = GameObject.Find(targetObjectName);
         Vector3 pos = targetObject.transform.position;
-        pos.y = pos.y + 5;
-        pos.x = pos.x - 8;
+        pos.y = pos.y + y;
+        pos.x = pos.x - x;
         this.transform.position = pos;
 
 

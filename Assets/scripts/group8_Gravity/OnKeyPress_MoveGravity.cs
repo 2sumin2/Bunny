@@ -15,6 +15,7 @@ public class OnKeyPress_MoveGravity : MonoBehaviour
     bool jumpFlag = false; // 점프 상태인지 
     bool groundFlag = false; // 발이 무언가에 닿았는지 
     Rigidbody2D rbody;
+    int count = 0;
 
     void Start()// 처음에 시행한다
     {
@@ -25,16 +26,25 @@ public class OnKeyPress_MoveGravity : MonoBehaviour
 
     void Update() // 계속 시행한다 
     {
+        count += 1;
         vx = 0;
         if (Input.GetKey("right")) // 만약 오른쪽 키가 눌리면
         {
             vx = speed; // 오른쪽으로 진행하는 이동량을 넣는다
             leftFlag = false;
+            if (groundFlag && count % 30 == 0)
+            {
+                SoundManager.instance.PlayStepSound();
+            }
         }
         if (Input.GetKey("left")) // 만약 왼쪽 키가 눌리면
         { // 
             vx = -speed; // 왼쪽으로 진행하는 이동량을 넣는다 
             leftFlag = true;
+            if (groundFlag && count % 30 == 0)
+            {
+                SoundManager.instance.PlayStepSound();
+            }
         }
         // 만약 스페이스키가 눌렸을 때 발이 무언가에 닿았다면 
         if (Input.GetKey("space") && groundFlag)
@@ -59,6 +69,7 @@ public class OnKeyPress_MoveGravity : MonoBehaviour
         // 만약 점프할 때 
         if (jumpFlag)
         {
+            SoundManager.instance.PlayJumpSound();
             jumpFlag = false;
             rbody.AddForce(new Vector2(0, jumppower), ForceMode2D.Impulse);
         }

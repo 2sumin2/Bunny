@@ -38,7 +38,10 @@ public class Intro : MonoBehaviour
             animator.Play(skipAnime);
             count += 1;
             rbody.velocity = new Vector2(2, 0);
-
+            if (count % 30 == 0)
+            {
+                SoundManager.instance.PlayStepSound();
+            }
         }
         else if (count == 140)
         {
@@ -46,6 +49,7 @@ public class Intro : MonoBehaviour
             animator.Play(idleAnime);
             rbody.velocity = new Vector2(0, 0);
             showObject.SetActive(true);
+            SoundManager.instance.PlayOwwSound();
             count += 1;
         }
         else if (count < 200)
