@@ -928,6 +928,8 @@ MonoBehaviour:
   die: {fileID: 8300000, guid: 31f7e5991f0101b4c8da556e807a9e42, type: 3}
   item: {fileID: 8300000, guid: f7e968b02f1cb1f42b5501c27e3fedf4, type: 3}
   carrot: {fileID: 8300000, guid: aa5b99db825bbc74f908e274fac2414f, type: 3}
+  crack: {fileID: 0}
+  destroy: {fileID: 0}
 --- !u!114 &997969600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -948,10 +950,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997969598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.869864, y: -0.07567531, z: -238.016}
+  m_LocalPosition: {x: 11.869864, y: -0.07567531, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1987311435}
+  - {fileID: 1181436448}
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1066,7 +1069,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 987e1e47f05cea945ae95fbc7cff30af, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.262
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1074,7 +1077,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.948802
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -1157,12 +1160,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181436446}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.869864, y: 0.07567531, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_Father: {fileID: 997969601}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1472515273
 GameObject:
@@ -1467,7 +1470,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.780666
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2028,7 +2031,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987311433}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.237654, y: 2.1649292, z: -1.5158081}
+  m_LocalPosition: {x: -10.237654, y: 2.1649292, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 997969601}

@@ -281,7 +281,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.43, y: 1.47}
+    oldSize: {x: 3.33, y: 1.31}
     newSize: {x: 3.43, y: 1.47}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1076,7 +1076,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.7367992
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1392,6 +1392,8 @@ MonoBehaviour:
   die: {fileID: 8300000, guid: 31f7e5991f0101b4c8da556e807a9e42, type: 3}
   item: {fileID: 8300000, guid: f7e968b02f1cb1f42b5501c27e3fedf4, type: 3}
   carrot: {fileID: 8300000, guid: aa5b99db825bbc74f908e274fac2414f, type: 3}
+  crack: {fileID: 0}
+  destroy: {fileID: 0}
 --- !u!114 &2142066023
 MonoBehaviour:
   m_ObjectHideFlags: 0

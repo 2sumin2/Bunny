@@ -354,6 +354,8 @@ MonoBehaviour:
   die: {fileID: 8300000, guid: 31f7e5991f0101b4c8da556e807a9e42, type: 3}
   item: {fileID: 8300000, guid: f7e968b02f1cb1f42b5501c27e3fedf4, type: 3}
   carrot: {fileID: 8300000, guid: aa5b99db825bbc74f908e274fac2414f, type: 3}
+  crack: {fileID: 0}
+  destroy: {fileID: 0}
 --- !u!114 &284162343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1074,7 +1076,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.7367997
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
